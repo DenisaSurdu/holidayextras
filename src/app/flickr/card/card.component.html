@@ -1,0 +1,15 @@
+<div class="card">
+  <img src="{{item?.media?.m}}" alt="{{item?.title}}" class="card-img-top img-fluid"/>
+  <div class="card-body">
+    <h2 class="card-title"><a href="{{item?.link}}" title="{{item?.title}}">{{item?.title}}</a>
+      <small>by <a href="//www.flickr.com/photos/{{item?.author}}"> {{getAuthor(item?.author)}}</a></small>
+    </h2>
+    <p class="card-text">Description:  {{item?.description}}</p>
+  </div>
+  <div class="card-footer">
+    <small class="text-muted"><span *ngIf="item?.tags && item?.tags.length > 0">Tags:</span> {{item?.tags}}</small>
+  </div>
+</div>
+
+<!--
+<span [innerHTML]="item.description"></span> -->

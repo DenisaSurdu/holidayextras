@@ -1,0 +1,12 @@
+<div class="row" infiniteScroll
+     [infiniteScrollDistance]="2"
+     [infiniteScrollUpDistance]="1.5"
+     [infiniteScrollThrottle]="50"
+     (scrolled)="onScrollDown()">
+
+  <div class="card-deck">
+  <div *ngFor="let item of flickFeed;" class="col-3">
+      <app-card [item]="item"></app-card>
+    </div>
+  </div>
+</div>
